@@ -1,8 +1,7 @@
-const input = require('fs').readFileSync('input/1', 'UTF-8')
+const input = require('fs').readFileSync('input/1', 'UTF-8').split('\n\n')
 
 // Break input into sorted totals per elf
-const elves = input
-  .split('\n\n')
+const elves = input  
   .map(elf => elf
     .split('\n')
     .map(line => parseInt(line))

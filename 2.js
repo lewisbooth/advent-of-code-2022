@@ -1,8 +1,5 @@
 const input = require('fs').readFileSync('input/2', 'UTF-8').split('\n')
 
-let stageOneScore = 0
-let stageTwoScore = 0
-
 // Hard-code the outcomes
 const stageOne = {
   "A X": 4,
@@ -28,10 +25,5 @@ const stageTwo = {
   "C Z": 7,
 }
 
-input.forEach(round => {
-  stageOneScore += stageOne[round]
-  stageTwoScore += stageTwo[round]
-})
-
-console.log('Stage 1: ' + stageOneScore)    
-console.log('Stage 2: ' + stageTwoScore)    
+console.log('Stage 1: ' + input.map(round => stageOne[round]).reduce((a, b) => a + b))    
+console.log('Stage 2: ' + input.map(round => stageTwo[round]).reduce((a, b) => a + b))
