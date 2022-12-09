@@ -1,11 +1,10 @@
-const input = require('fs').readFileSync('input/1', 'UTF-8').split('\n\n')
+const input = require('fs').readFileSync('input/1', 'UTF-8').split('\n\n').split('\n')
 
 // Break input into sorted totals per elf
 const elves = input  
-  .map(elf => elf
-    .split('\n')
+    .map(elf => elf	
     .reduce((a, b) => a + b, 0))
-  .sort((a, b) => a - b)
+    .sort((a, b) => a - b)
 
 // The maximum number of calories that any elf is carrying
 console.log('Stage 1: ' + elves.slice(-1))    
