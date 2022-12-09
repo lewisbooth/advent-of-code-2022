@@ -4,8 +4,7 @@ const input = require('fs').readFileSync('input/1', 'UTF-8').split('\n\n')
 const elves = input  
   .map(elf => elf
     .split('\n')
-    .map(line => parseInt(line))
-    .reduce((a, b) => a + b))
+    .reduce((a, b) => a + b, 0))
   .sort((a, b) => a - b)
 
 // The maximum number of calories that any elf is carrying
