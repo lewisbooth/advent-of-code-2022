@@ -10,9 +10,9 @@ const stageOne = pairs.filter(pair =>
     (pair[0][0] <= pair[1][0] && pair[0][1] >= pair[1][1]) ||
     (pair[1][0] <= pair[0][0] && pair[1][1] >= pair[0][1])).length
 
-console.log(stageOne)
+console.log('Stage 1: ' + stageOne)
 
 const stageTwo = pairs.filter(pair => 
     (pair[0][0] <= pair[1][1] && pair[0][1] >= pair[1][0])).length
 
-console.log(stageTwo)
+console.log('Stage 2: ' + stageTwo)
