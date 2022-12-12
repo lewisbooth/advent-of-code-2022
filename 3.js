@@ -1,6 +1,6 @@
 const elves = require('fs').readFileSync('input/3', 'UTF-8').split('\n').map(elf => elf.split(''))
 
-// Pad start so the letters line up to the priority value
+// Pad the start so the array index matches the priority value
 const itemMap = '_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 // Sum the priorities of the misplaced items
